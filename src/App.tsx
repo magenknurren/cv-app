@@ -1,17 +1,24 @@
-import './App.css';
-import ButtonAppBar from './ButtonAppBar';
-import ContactFabButton from './ContactFabButton';
+import React from 'react';
 
-require('dotenv').config()
+import { Switch, Route } from 'react-router-dom';
+import ContactFabButton from './components/ContactFabButton';
+import NavigationDrawer from './navigation/NavigationDrawer';
+import Routes, { IRoute } from './navigation/Routes';
 
-function App() {
+const App: React.FC = () => {
 
   return (
-    <>
-      <ButtonAppBar />
-      {/* router loads content here */}
+    <div>
+      <NavigationDrawer />
+      <Switch>
+        {Routes.map((route: IRoute) => (
+          <Route exact path={route.path} key={route.path}>
+            <route.component />
+          </Route>
+        ))}
+      </Switch>
       <ContactFabButton />
-    </>
+    </div>
   );
 }
 

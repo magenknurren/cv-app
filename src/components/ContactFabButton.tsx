@@ -1,7 +1,6 @@
 import Fab from '@material-ui/core/Fab';
 import MailIcon from '@material-ui/icons/Mail';
 
-
 export default function ContactFabButton() {
     return (
         //akwardly surrounded with the link to preved opening an additional tab for mailto:...
