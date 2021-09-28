@@ -1,40 +1,16 @@
 import React, { useState } from 'react';
 import { NavLink, RouteComponentProps, withRouter } from 'react-router-dom';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import {
-	Drawer,
-	MenuList,
-	ListItemText,
-	ListItemIcon,
-	ListItem
-} from '@material-ui/core';
 import Routes from './Routes';
 import BtnBar from './BtnBar';
-
-const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		root: {
-			flexGrow: 1,
-		},
-		drawer: {
-			width: 250,
-		},
-		fullList: {
-			width: 'auto',
-		},
-	}),
-);
+import { Drawer, MenuList, ListItem, ListItemIcon, ListItemText, Box } from '@mui/material';
 
 const NavigationDrawer: React.FC<RouteComponentProps> = ({ history, location, match }): JSX.Element => {
-
-	const classes = useStyles();
 
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleDrawer = (open: boolean) => (
 		event: React.KeyboardEvent | React.MouseEvent,
 	) => {
-		console.log("here");
 		if (
 			event.type === 'keydown' &&
 			((event as React.KeyboardEvent).key === 'Tab' ||
@@ -52,12 +28,10 @@ const NavigationDrawer: React.FC<RouteComponentProps> = ({ history, location, ma
 
 	return (
 		<div>
-			<div className={classes.root}>
-				<BtnBar onMenuClick={toggleDrawer(true)} />
-			</div>
-			<Drawer classes={{ paper: classes.drawer }} open={isOpen} onClose={toggleDrawer(false)}>
-				<div
-					className={classes.fullList}
+			<BtnBar onMenuClick={toggleDrawer(true)} />
+			<Drawer open={isOpen} onClose={toggleDrawer(false)}>
+				<Box
+					sx={{ width: 250 }}
 					role="presentation"
 					onClick={toggleDrawer(false)}
 					onKeyDown={toggleDrawer(false)}
@@ -66,17 +40,19 @@ const NavigationDrawer: React.FC<RouteComponentProps> = ({ history, location, ma
 						{Routes.map((prop, key) => {
 							return (
 								<NavLink to={prop.path} style={{ textDecoration: 'none', color: 'black' }} key={key}>
-									<ListItem button selected={activeRoute(prop.path)}>
-										<ListItemIcon>{prop.icon} </ListItemIcon>
-										<ListItemText primary={prop.sidebarName} />
-									</ListItem>
+									<Box sx={{ m: 1.5 }}>
+										<ListItem button selected={activeRoute(prop.path)}>
+											<ListItemIcon>{prop.icon} </ListItemIcon>
+											<ListItemText primary={prop.sidebarName} />
+										</ListItem>
+									</Box>
 								</NavLink>
 							);
 						})}
 					</MenuList>
-				</div>
+				</Box>
 			</Drawer>
-		</div>
+		</div >
 	);
 };
 

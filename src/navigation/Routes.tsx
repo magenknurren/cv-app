@@ -1,17 +1,19 @@
 import React from 'react';
-import PersonIcon from '@material-ui/icons/Person';
-import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
-import SchoolIcon from '@material-ui/icons/School';
-import PaletteIcon from '@material-ui/icons/Palette';
-import TimelineIcon from '@material-ui/icons/Timeline';
-import HomeIcon from '@material-ui/icons/Home';
+import PersonIcon from '@mui/icons-material/Person';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import SchoolIcon from '@mui/icons-material/School';
+import PaletteIcon from '@mui/icons-material/Palette';
+import TimelineIcon from '@mui/icons-material/Timeline';
+import HomeIcon from '@mui/icons-material/Home';
+import TransferWithinAStationIcon from '@mui/icons-material/TransferWithinAStation';
 import Persona from '../components/Persona';
 import Home from '../components/Home';
+import Education from '../components/Education';
 
 
-const Education: React.FC = (): JSX.Element => {
+const Experience: React.FC = (): JSX.Element => {
   return (
-    <h1>Education</h1>
+    <h1>Experience</h1>
   );
 };
 
@@ -58,6 +60,12 @@ const Routes: IRoute[] = [
     sidebarName: 'Education',
     icon: <SchoolIcon />,
     component: Education
+  },
+  {
+    path: '/experience',
+    sidebarName: 'Experience',
+    icon: <TransferWithinAStationIcon />,
+    component: Experience
   },
   {
     path: '/skills_knowledge',

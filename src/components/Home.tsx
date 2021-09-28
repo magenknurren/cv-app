@@ -1,23 +1,12 @@
-import {
-    List,
-    ListItem,
-    ListItemText,
-    Paper,
-} from '@material-ui/core';
+import { Paper, List, ListItem, ListItemText, Box } from '@mui/material';
 import { Component } from 'react';
-import data from '../data/persona.json';
-import styles from './comp.style.module.css'
 
 export default class Home extends Component {
 
-    person = data.map((data) => {
-        return { firstName: data.firstName, lastName: data.lastName, birthday: data.birthday, email: data.email };
-    })
-
     render() {
         return (
-            <div className={styles.home}>
-                <Paper className={styles.text} >
+            <Box sx={{ m: 2 }}>
+                <Paper sx={{ p: 2, textAlign: 'left' }}>
                     <h2>Welcome</h2>
                     This is a little Curriculum Vitae project. It is written in React(LINK) with Material-UI (LINK).
                     There is no database attached and all the data is provided by JSON files.
@@ -41,9 +30,8 @@ export default class Home extends Component {
                             />
                         </ListItem>
                     </List>
-
                 </Paper>
-            </div>
+            </Box>
         );
     }
 }

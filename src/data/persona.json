@@ -1,9 +1,9 @@
 [
     {
-        "firstName": "Jane",
-        "lastName": "Doe",
-        "birthday": "12.09.1999",
-        "email": "some@gg.com",
-        "phone": "+4917-777666"
+        "Name": "Jane Doe",
+        "Birthday": "12.09.1999",
+        "Email": "some@gg.com",
+        "Phone": "+4917-777666",
+        "Address": "Haifa - Israel"
     }
 ]

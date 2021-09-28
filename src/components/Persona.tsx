@@ -1,55 +1,49 @@
+import { Box, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { Component } from 'react';
 import data from '../data/persona.json';
-
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import styles from './comp.style.module.css'
-
+import portrait from '../data/portrait.jpg';
 
 export default class Persona extends Component {
 
-    person = data.map((data) => {
-        return { firstName: data.firstName, lastName: data.lastName, birthday: data.birthday, email: data.email, phone: data.phone };
-    })
-
     render() {
+
+        const personaContent = [];
+        for (const [key, value] of Object.entries(data[0])) {
+            personaContent.push(
+                <div>
+                    <Typography variant="h5" component="h2">
+                        {value}
+                    </Typography>
+                    <Typography color="textSecondary" gutterBottom>
+                        {key}
+                    </Typography>
+                </div>
+            );
+        }
+
         return (
-            <div className={styles.dist}>
-                <Card>
-                    <CardContent>
-
-                        <Typography variant="h5" component="h2">
-                            {this.person[0].firstName} {this.person[0].lastName}
-                        </Typography>
-                        <Typography color="textSecondary" gutterBottom>
-                            Name
-                        </Typography>
-
-                        <Typography variant="h5" component="h2">
-                            {this.person[0].birthday}
-                        </Typography>
-                        <Typography color="textSecondary">
-                            Birthdate
-                        </Typography>
-
-                        <Typography variant="h5" component="h2">
-                            {this.person[0].email}
-                        </Typography>
-                        <Typography color="textSecondary">
-                            Email
-                        </Typography>
-
-                        <Typography variant="h5" component="h2">
-                            {this.person[0].phone}
-                        </Typography>
-                        <Typography color="textSecondary">
-                            Phone
-                        </Typography>
-
-                    </CardContent>
-                </Card>
-            </div>
+            <Box sx={{ m: 2 }}>
+                <Grid container spacing={2}>
+                    <Grid item md={6}>
+                        <Card>
+                            <CardContent>
+                                {personaContent}
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid item md={6}>
+                        <Card>
+                            <CardMedia
+                                component="img"
+                                height="500"
+                                width="300"
+                                image={portrait}
+                                alt="Portrait picture"
+                            />
+                        </Card>
+                    </Grid>
+                </Grid>
+            </Box>
         );
     }
 }
