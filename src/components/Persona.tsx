@@ -24,14 +24,14 @@ export default class Persona extends Component {
         return (
             <Box sx={{ m: 2 }}>
                 <Grid container spacing={2}>
-                    <Grid item md={6}>
+                    <Grid sx={{ flexGrow: 1 }} item md={6} >
                         <Card>
                             <CardContent>
                                 {personaContent}
                             </CardContent>
                         </Card>
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid sx={{ flexGrow: 1 }} item md={6}>
                         <Card>
                             <CardMedia
                                 component="img"
