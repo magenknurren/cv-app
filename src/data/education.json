@@ -1,23 +1,20 @@
 [
     {
-        "10/12 - 04/16": {
-            "Subject": "Politcs and Cool Shit",
-            "Place Of Study": "",
-            "Diploma": "B.Sc. Computer Science and Media"
-        }
+            "period": "10/12 - 04/16",
+            "subject": "Politcs and Cool Shit",
+            "place": "Life",
+            "diploma": "B.Sc. Computer Science and Media"
     },
     {
-        "10/08 - 09/11": {
-            "Subject": "Life",
-            "Place Of Study": "Grandma and Grandpas Home",
-            "Diploma": "M.Sc. YOLO"
-        }
+            "period": "10/15 - 04/18",
+            "subject": "Life",
+            "place": "Grandma and Grandpas Home",
+            "diploma": "M.Sc. YOLO"
     },
     {
-        "1998 – 1999": {
-            "Subject": "School",
-            "Place Of Study": "Grandma and Grandpas Home",
-            "Diploma": "M.Sc. YOLO"
-        }
+            "period": "1998 - 1999",
+            "subject": "School",
+            "place": "Grandma and Grandpas Home",
+            "diploma": "M.Sc. YOLO"
     }
 ]

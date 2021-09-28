@@ -31,7 +31,7 @@ const NavigationDrawer: React.FC<RouteComponentProps> = ({ history, location, ma
 			<BtnBar onMenuClick={toggleDrawer(true)} />
 			<Drawer open={isOpen} onClose={toggleDrawer(false)}>
 				<Box
-					sx={{ width: 250 }}
+					sx={{ width: 300 }}
 					role="presentation"
 					onClick={toggleDrawer(false)}
 					onKeyDown={toggleDrawer(false)}

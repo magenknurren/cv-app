@@ -23,26 +23,29 @@ export default class Persona extends Component {
 
         return (
             <Box sx={{ m: 2 }}>
-                <Grid container spacing={2}>
-                    <Grid sx={{ flexGrow: 1 }} item md={6} >
-                        <Card>
-                            <CardContent>
-                                {personaContent}
-                            </CardContent>
-                        </Card>
+                <h2>Persona</h2>
+                <Box sx={{ m: 2 }}>
+                    <Grid container spacing={2}>
+                        <Grid sx={{ flexGrow: 1 }} item md={6} >
+                            <Card>
+                                <CardContent>
+                                    {personaContent}
+                                </CardContent>
+                            </Card>
+                        </Grid>
+                        <Grid sx={{ flexGrow: 1 }} item md={6}>
+                            <Card>
+                                <CardMedia
+                                    component="img"
+                                    height="500"
+                                    width="300"
+                                    image={portrait}
+                                    alt="Portrait picture"
+                                />
+                            </Card>
+                        </Grid>
                     </Grid>
-                    <Grid sx={{ flexGrow: 1 }} item md={6}>
-                        <Card>
-                            <CardMedia
-                                component="img"
-                                height="500"
-                                width="300"
-                                image={portrait}
-                                alt="Portrait picture"
-                            />
-                        </Card>
-                    </Grid>
-                </Grid>
+                </Box>
             </Box>
         );
     }
