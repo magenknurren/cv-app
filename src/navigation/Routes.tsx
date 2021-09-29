@@ -9,6 +9,8 @@ import TransferWithinAStationIcon from '@mui/icons-material/TransferWithinAStati
 import Persona from '../components/Persona';
 import Home from '../components/Home';
 import Education from '../components/Education';
+import EducationTimeline from '../components/EducationTimeline';
+
 
 
 const Experience: React.FC = (): JSX.Element => {
@@ -60,6 +62,12 @@ const Routes: IRoute[] = [
     sidebarName: 'Education',
     icon: <SchoolIcon />,
     component: Education
+  },
+  {
+    path: '/education-timeline',
+    sidebarName: 'Education-Timeline',
+    icon: <SchoolIcon />,
+    component: EducationTimeline
   },
   {
     path: '/experience',
