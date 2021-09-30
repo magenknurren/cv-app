@@ -47,9 +47,9 @@ export default class Education extends Component {
         }
 
         return (
-            <Box sx={{ m: 2 }}>
+            <Box sx={{ m: 2}}>
                 <h2>Education</h2>
-                <Paper sx={{ m: 2 }}>
+                <Paper sx={{ m: 2, pt: 1}}>
                     <Timeline>
                         {educationContent}
                         <TimelineItem>
