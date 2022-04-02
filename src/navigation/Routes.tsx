@@ -4,7 +4,7 @@ import PaletteIcon from '@mui/icons-material/Palette';
 import PersonIcon from '@mui/icons-material/Person';
 import SchoolIcon from '@mui/icons-material/School';
 import React from 'react';
-import EducationExperience from '../components/EducationExpericence';
+import EducationExperiencePage from '../components/education_work/EducationExpericencePage';
 import Home from '../components/Home';
 import Persona from '../components/Persona';
 
@@ -51,7 +51,7 @@ const Routes: IRoute[] = [
     path: '/cv/education_experience',
     sidebarName: 'Education And Experience',
     icon: <SchoolIcon />,
-    component: EducationExperience
+    component: EducationExperiencePage
   },
   {
     path: '/cv/skills_knowledge',

@@ -1,7 +1,8 @@
-import { Box, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { Component } from 'react';
 import data from '../data/persona.json';
 import portrait from '../data/portrait.jpg';
+import CVPage from './CVPage';
 
 export default class Persona extends Component {
 
@@ -10,7 +11,7 @@ export default class Persona extends Component {
 		const personaContent = [];
 		for (const [key, value] of Object.entries(data[0])) {
 			personaContent.push(
-				<div>
+				<div key={key}>
 					<Typography variant="h5" component="h2">
 						{value}
 					</Typography>
@@ -22,31 +23,28 @@ export default class Persona extends Component {
 		}
 
 		return (
-			<Box sx={{ m: 2 }}>
-				<h2>Persona</h2>
-				<Box sx={{ m: 2 }}>
-					<Grid container spacing={2}>
-						<Grid sx={{ flexGrow: 1 }} item md={6} >
-							<Card>
-								<CardContent>
-									{personaContent}
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid sx={{ flexGrow: 1 }} item md={6}>
-							<Card>
-								<CardMedia
-									component="img"
-									height="500"
-									width="300"
-									image={portrait}
-									alt="Portrait picture"
-								/>
-							</Card>
-						</Grid>
+			<CVPage title='Persona'>
+				<Grid container spacing={2}>
+					<Grid sx={{ flexGrow: 1 }} item md={6} >
+						<Card>
+							<CardContent>
+								{personaContent}
+							</CardContent>
+						</Card>
 					</Grid>
-				</Box>
-			</Box>
+					<Grid sx={{ flexGrow: 1 }} item md={6}>
+						<Card>
+							<CardMedia
+								component="img"
+								height="500"
+								width="300"
+								image={portrait}
+								alt="Portrait picture"
+							/>
+						</Card>
+					</Grid>
+				</Grid>
+			</CVPage>
 		);
 	}
 }

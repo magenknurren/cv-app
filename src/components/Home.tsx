@@ -1,13 +1,13 @@
-import { Paper, List, ListItem, ListItemText, Box } from '@mui/material';
+import { List, ListItem, ListItemText, Paper } from '@mui/material';
 import { Component } from 'react';
+import CVPage from './CVPage';
 
 export default class Home extends Component {
 
 	render() {
 		return (
-			<Box sx={{ m: 2 }}>
+			<CVPage title='Welcome'>
 				<Paper sx={{ p: 2, textAlign: 'left' }}>
-					<h2>Welcome</h2>
 					This is a little Curriculum Vitae project. It is written in React(LINK) with Material-UI (LINK).
 					There is no database attached and all the data is provided by JSON files.
 
@@ -31,7 +31,7 @@ export default class Home extends Component {
 						</ListItem>
 					</List>
 				</Paper>
-			</Box>
+			</CVPage>
 		);
 	}
 }
