@@ -7,16 +7,7 @@ import React from 'react';
 import EducationExperiencePage from '../components/education_work/EducationExpericencePage';
 import Home from '../components/Home';
 import Persona from '../components/Persona';
-
-
-const SkillsKnowledge: React.FC = (): JSX.Element => {
-  return (
-    <div>
-      <h2>Skills And Knowledge</h2>
-      <p>coming soon</p>
-    </div>
-  );
-};
+import SkillsKnowledgePage from '../components/skills_knowledge/SkillsKnowledgePage';
 
 const Downloads: React.FC = (): JSX.Element => {
   return (
@@ -57,7 +48,7 @@ const Routes: IRoute[] = [
     path: '/cv/skills_knowledge',
     sidebarName: 'Skills and Knowledge',
     icon: <PaletteIcon />,
-    component: SkillsKnowledge
+    component: SkillsKnowledgePage
   },
   {
     path: '/cv/downloads',

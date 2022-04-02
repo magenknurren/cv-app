@@ -1,0 +1,27 @@
+[
+	{
+		"name": "React",
+		"rating": 4, 
+		"info": "Awesome stuff I learned in my spare time"
+	},
+	{
+		"name": "C++",
+		"rating": 3,
+		"info": "Learned in School"
+	},
+	{
+		"name": "Angular",
+		"rating": 10,
+		"info": "If Chuck Noris would code in Angular, he would ask me!"
+	},
+	{
+		"name": "Putting on Shoes",
+		"rating": 8,
+		"info": "Yes, i am awesome in it"
+	},
+	{
+		"name": "Getting up early",
+		"rating": 1,
+		"info": "Can do it, if you ask nicely!"
+	}
+]
